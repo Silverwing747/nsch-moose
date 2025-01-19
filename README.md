@@ -4,4 +4,4 @@ nsch_moose
 # Theory and Equations for [Application Name]
 
 ## Documentation
-- [Theory and Equations](docs/theory.md)
+- [Theory and Equations](doc/theory.md)
