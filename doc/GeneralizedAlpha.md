@@ -11,13 +11,13 @@ This method is particularly useful in simulations where controlling the high-fre
 
 ## Theory
 
-The algorithm can be formulated as follows: Given $\dot{V}_n$, $V_n$, and $\Delta t_n = t_{n+1} - t_n$, find $\dot{V}_{n+1}$, $V_{n+1}$, $\dot{V}_{n+\alpha_m}$, $V_{n+\alpha_f}$ such that the residual vector
+The algorithm can be formulated as follows: Given $\dot{V}_n$, $V_n$, and $\Delta t_n = t_{n+1} - t_n$, find $\dot{V}_{n+1}$, $V_{n+1}$, $\dot{V}_{n+\alpha_m}$, $V_{n+\alpha_f}$ such that the residual vector:
 
 $$
 R(\dot{V}_{n+\alpha_m}, V_{n+\alpha_f}) = 0,
 $$
 
-where
+where:
 
 $$
 V_{n+1} = V_n + \Delta t_n \dot{V}_n + \gamma \Delta t_n (\dot{V}_{n+1} - \dot{V}_n),
@@ -31,7 +31,7 @@ $$
 V_{n+\alpha_f} = V_n + \alpha_f (V_{n+1} - V_n),
 $$
 
-and $\alpha_m$, $\alpha_f$, and $\gamma$ are parameters of the generalized-$\alpha$ method. 
+and $\alpha_m$, $\alpha_f$, and $\gamma$ are parameters of the generalized-$\alpha$ method.
 
 Second-order accuracy in time is achieved if we choose:
 
