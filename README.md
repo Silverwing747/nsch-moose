@@ -55,7 +55,7 @@ In the equations above, the first equation is the Navier-Stokes equation, in whi
 
 We adopt the variational multiscale (VMS) method for the numerical implementation. The VMS method is a numerical technique used to solve partial differential equations, particularly in fluid dynamics. It involves decomposing the solution into coarse and fine scales, allowing for more accurate and efficient simulations of complex systems. By capturing the effects of smaller scales on the larger scales, VMS improves the stability and accuracy of the numerical solution, making it particularly useful for simulating turbulent flows and multiphase interactions. For the exact formulation, we refer readers to the book chapter ["Phase-Field Modeling for Flow Simulation"](https://doi.org/10.1007/978-3-031-36942-1_4) in *Frontiers in Computational Fluid-Structure Interaction and Flow Simulation*, T. E. Tezduyar, Ed. (Springer International Publishing, Cham, 2023).
 
-We use the generalized-$\alpha$ method for time integration; see [GeneralizedAlpha.md](doc/GeneralizedAlpha.md) for implementation details. 
+We use the generalized- $\alpha$ method for time integration; see [GeneralizedAlpha.md](doc/GeneralizedAlpha.md) for implementation details. 
 
 
 
