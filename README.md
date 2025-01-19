@@ -79,3 +79,39 @@ For more information, please see the official [MOOSE website](https://mooseframe
 
     Some tests are SKIPPED. This is normal as some tests are specific to available resources, or some other constraint your machine does not satisfy.
 
+## Install NSCH Application
+
+1. Clone the NSCH-MOOSE repository under the MOOSE directory:
+
+    ```bash
+    cd ~/projects
+    git clone https://github.com/Silverwing747/nsch-moose.git
+    cd nsch-moose
+    ```
+
+2. Build the NSCH Application:
+
+    To build the NSCH Application, run the following commands:
+
+        ```bash
+        cd ~/projects/nsch-moose
+        make -j 6
+        ```
+
+    This will generate an executable file `nsch-moose-opt` under the directory `~/projects/nsch-moose`.
+
+    You can now execute the program using:
+
+        ```bash
+        mpiexec -n N ./nsch-moose-opt -i InputFileName
+        ```
+
+    where `N` is the number of cores, and `InputFileName` is the path to the input file specified by the user. For more details about the input file, refer to the [MOOSE Input File Document](https://mooseframework.inl.gov/modules/thermal_hydraulics/tutorials/basics/input_file.html).
+
+3. Test NSCH Application
+
+    The general implementation of NSCH allows the simply coupling and decoupling of the Naver-Stokes functional and Cahn-Hilliard functional, which allows user to test each subsystems one by one.
+
+    3.1 Test Navier-Stokes Subsection
+
+    To verify the implementation of Navier-Stokes equation, 
