@@ -26,8 +26,6 @@ For more information, including installation instructions, please see the offici
 
 The Navier-Stokes Cahn-Hilliard (NSCH) equations describe the behavior of two-phase fluid flow with non-matching densities. These equations combine the Navier-Stokes equations, which govern the motion of viscous fluid substances, with the Cahn-Hilliard equation, which models phase separation and interfacial dynamics. The NSCH equations are particularly useful for simulating complex fluid interactions where the densities of the two phases are different, such as in multiphase flows with oil and water. The equations account for the conservation of mass, momentum, and the phase field variable, providing a comprehensive framework for studying the dynamics of immiscible fluids.
 
-## Model Description
-
 There are many Navier-Stokes/Cahn-Hilliard equations. In this project, we choose the one developed in [Dong, 2012](https://doi.org/10.1016/j.jcp.2012.04.041). Let $\Omega \subset \mathbb{R}^d$ ($d=$ 2 or 3) denote the flow domain, and $\Gamma = \partial \Omega$ denote the boundary of $\Omega$. Consider a mixture of two immiscible, incompressible fluids contained in $\Omega$. Let $\rho_1$ and $\rho_2$ respectively denote the densities of the two fluids, and $\mu_1$ and $\mu_2$ denote their dynamic viscosities. With the phase field approach, this two-phase system is described by the following coupled system of equations:
 
 $$
@@ -52,3 +50,11 @@ $$
 $$
 
 In the equations above, the first equation is the Navier-Stokes equation, in which the term $\lambda \nabla \cdot (\nabla \phi \otimes \nabla \phi)$ is an additional interfacial stress acting across the interface. The second equation is the incompressibility constraint. The third equation is the Cahn-Hilliard equation. For more details, we refer readers to [Ding, 2007](https://doi.org/10.1016/j.jcp.2007.06.028) and [Dong, 2012](https://doi.org/10.1016/j.jcp.2012.04.041).
+
+We adopt the variational multiscale (VMS) method for the numerical implementation. The VMS method is a numerical technique used to solve partial differential equations, particularly in fluid dynamics. It involves decomposing the solution into coarse and fine scales, allowing for more accurate and efficient simulations of complex systems. By capturing the effects of smaller scales on the larger scales, VMS improves the stability and accuracy of the numerical solution, making it particularly useful for simulating turbulent flows and multiphase interactions. For the exact formulation, we refer readers to the book chapter ["Phase-Field Modeling for Flow Simulation"](https://doi.org/10.1007/978-3-031-36942-1_4) in *Frontiers in Computational Fluid-Structure Interaction and Flow Simulation*, T. E. Tezduyar, Ed. (Springer International Publishing, Cham, 2023). We use the genearlized-$\alpha$ method for time integration; see [GeneralizedAlpha.md](doc/GeneralizedAlpha.md) for implementation details. 
+
+
+
+
+
+
