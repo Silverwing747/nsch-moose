@@ -28,7 +28,7 @@ The Navier-Stokes Cahn-Hilliard (NSCH) equations describe the behavior of two-ph
 
 ## Model Description
 
-There are many Navier-Stokes/Cahn-Hilliard equations. In this project, we choose the one developed in [Dong, 2012](https://doi.org/10.1016/j.jcp.2012.02.025). Let $\Omega \subset \mathbb{R}^d$ ($d=$ 2 or 3) denote the flow domain, and $\Gamma = \partial \Omega$ denote the boundary of $\Omega$. Consider a mixture of two immiscible, incompressible fluids contained in $\Omega$. Let $\rho_1$ and $\rho_2$ respectively denote the densities of the two fluids, and $\mu_1$ and $\mu_2$ denote their dynamic viscosities. With the phase field approach, this two-phase system is described by the following coupled system of equations:
+There are many Navier-Stokes/Cahn-Hilliard equations. In this project, we choose the one developed in [Dong, 2012](https://doi.org/10.1016/j.jcp.2012.04.041). Let $\Omega \subset \mathbb{R}^d$ ($d=$ 2 or 3) denote the flow domain, and $\Gamma = \partial \Omega$ denote the boundary of $\Omega$. Consider a mixture of two immiscible, incompressible fluids contained in $\Omega$. Let $\rho_1$ and $\rho_2$ respectively denote the densities of the two fluids, and $\mu_1$ and $\mu_2$ denote their dynamic viscosities. With the phase field approach, this two-phase system is described by the following coupled system of equations:
 
 $$
 \begin{aligned}
@@ -48,7 +48,7 @@ $$
 where $\sigma$ is the interfacial surface tension and $M$ is the mobility of the interface. In this project, we assume both $\sigma$ and $M$ are constants. The density, $\rho$, and the dynamic viscosity, $\mu$, are related to the phase field function by
 
 $$
-\rho(\phi) = \frac{\rho_1 + \rho_2}{2} + \frac{\rho_1-\rho_2}{2}\phi, \, \mu(\phi) = \frac{\mu_1 + \mu_2}{2} + \frac{\mu_1-\mu_2}{2} \phi.
+\rho(\phi) = \frac{\rho_1 + \rho_2}{2} + \frac{\rho_1-\rho_2}{2}\phi, \mu(\phi) = \frac{\mu_1 + \mu_2}{2} + \frac{\mu_1-\mu_2}{2} \phi.
 $$
 
-In the equations above, the first equation is the Navier-Stokes equation, in which the term $\lambda \nabla \cdot (\nabla \phi \otimes \nabla \phi)$ is an additional interfacial stress acting across the interface. The second equation is the incompressibility constraint. The third equation is the Cahn-Hilliard equation. For more details, we refer readers to [Ding, 2007](https://doi.org/10.1016/j.jcp.2007.06.006) and [Dong, 2012](https://doi.org/10.1016/j.jcp.2012.02.025).
+In the equations above, the first equation is the Navier-Stokes equation, in which the term $\lambda \nabla \cdot (\nabla \phi \otimes \nabla \phi)$ is an additional interfacial stress acting across the interface. The second equation is the incompressibility constraint. The third equation is the Cahn-Hilliard equation. For more details, we refer readers to [Ding, 2007](https://doi.org/10.1016/j.jcp.2007.06.028) and [Dong, 2012](https://doi.org/10.1016/j.jcp.2012.04.041).
