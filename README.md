@@ -116,15 +116,18 @@ The NSCH application is designed to allow users to easily couple and decouple th
 
 To verify the implementation of the Navier-Stokes equations, two benchmark problems are provided:
 
-1. **Taylor-Green Vortex**: This problem is a well-known analytical solution for the Navier-Stokes equations. It involves a decaying vortex and is used to test the accuracy and stability of the numerical methods used in the NSCH application. The `InputFileName` corresponds to this test case is [test/tests/navier_stokes/TaylorGreenVortex.i](test/tests/navier_stokes/TaylorGreenVortex.i). 
-The initial condition looks as follow: 
-    ![Results ](test/tests/navier_stokes/TaylorGreen_IC.png)
-The solution at final time step ($t = 1.0$) looks as follow:
-    ![Results ](test/tests/navier_stokes/TaylorGreen_Final.png)
+1. **Taylor-Green Vortex**: This benchmark problem is a well-known analytical solution for the Navier-Stokes equations. It involves a decaying vortex and is used to test the accuracy and stability of the numerical methods in the NSCH application. The input file for this test case is [test/tests/navier_stokes/TaylorGreenVortex.i](test/tests/navier_stokes/TaylorGreenVortex.i). 
 
+    The initial condition is shown below:
+    ![Initial Condition](test/tests/navier_stokes/TaylorGreen_IC.png)
 
-2. **Lid-Driven Cavity**: This problem involves a square cavity with a moving lid, which generates a recirculating flow inside the cavity. It is commonly used to test the performance of numerical solvers for incompressible flows and to validate the implementation of boundary conditions. The `InputFileName` corresponds to this test case is [test/tests/navier_stokes/LidDrivenCavity.i](test/tests/navier_stokes/LidDrivenCavity.i). 
+    The solution at the final time step ($t = 1.0$) is shown below:
+    ![Final Solution](test/tests/navier_stokes/TaylorGreen_Final.png)
 
+2. **Lid-Driven Cavity**: This benchmark problem involves a square cavity with a moving lid, generating a recirculating flow inside the cavity. It is commonly used to test the performance of numerical solvers for incompressible flows and to validate the implementation of boundary conditions. The input file for this test case is [test/tests/navier_stokes/LidDrivenCavity.i](test/tests/navier_stokes/LidDrivenCavity.i). 
+
+    Once the vortex is developed, the solution should look like this:
+    ![Developed Vortex](test/tests/navier_stokes/LidDrivenCavity_Velocity.png)
 
 
 These test cases help ensure that the Navier-Stokes solver in the NSCH application is correctly implemented and capable of handling different types of fluid flow problems. 
