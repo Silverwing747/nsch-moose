@@ -32,14 +32,14 @@ There are many Navier-Stokes/Cahn-Hilliard equations. In this project, we choose
 
 $$
 \begin{aligned}
-    &\rho \left( \frac{\partial \bm{u}}{\partial t} + \bm{u} \cdot \nabla \bm{u}\right) = \nabla \cdot p\bm{I} + \nabla \cdot [\mu(\nabla \bm{u} + \nabla \bm{u}^T)] - \lambda \nabla \cdot (\nabla \phi \otimes \nabla \phi) + \rho\bm{g}, \\
-    &\nabla \cdot \bm{u} = 0, \\
-    &\frac{\partial \phi}{\partial t} + \bm{u} \cdot \nabla \phi = -\nabla \cdot (M \lambda \nabla \mu_c), \\
+    &\rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u}\right) = \nabla \cdot p\mathbf{I} + \nabla \cdot [\mu(\nabla \mathbf{u} + \nabla \mathbf{u}^T)] - \lambda \nabla \cdot (\nabla \phi \otimes \nabla \phi) + \rho\mathbf{g}, \\
+    &\nabla \cdot \mathbf{u} = 0, \\
+    &\frac{\partial \phi}{\partial t} + \mathbf{u} \cdot \nabla \phi = -\nabla \cdot (M \lambda \nabla \mu_c), \\
     &\mu_c = \nabla ^2 \phi - h(\phi).
 \end{aligned}
 $$
 
-In the above equations, $\bm{u}(\bm{x},t)$ is velocity, $p(\bm{x},t)$ is pressure, and $\bm{g}(\bm{x},t)$ is gravity, where $t$ is time and $\bm{x}$ is the spatial coordinate. $\phi(\bm{x},t)$ denotes the phase field function, $-1 \leq \phi \leq 1$; the flow regions with $\phi = 1$ and $\phi = -1$ respectively represent the first and the second fluids, and the iso-surface $\phi (\bm{x},t)=0$ marks the interface between the two fluids at time $t$. The function $h(\phi)$ is given by $h(\phi)=\frac{1}{\eta^2}\phi (\phi^2-1)$ by assuming a double-well potential, where $\eta$ is a characteristic length scale of the interface thickness. $\lambda$ is the mixing energy density and is related to the surface tension by
+In the above equations, $\mathbf{u}(\mathbf{x},t)$ is velocity, $p(\mathbf{x},t)$ is pressure, and $\mathbf{g}(\mathbf{x},t)$ is gravity, where $t$ is time and $\mathbf{x}$ is the spatial coordinate. $\phi(\mathbf{x},t)$ denotes the phase field function, $-1 \leq \phi \leq 1$; the flow regions with $\phi = 1$ and $\phi = -1$ respectively represent the first and the second fluids, and the iso-surface $\phi (\mathbf{x},t)=0$ marks the interface between the two fluids at time $t$. The function $h(\phi)$ is given by $h(\phi)=\frac{1}{\eta^2}\phi (\phi^2-1)$ by assuming a double-well potential, where $\eta$ is a characteristic length scale of the interface thickness. $\lambda$ is the mixing energy density and is related to the surface tension by
 
 $$
 \lambda = \frac{3}{2\sqrt{2}} \sigma \eta,
