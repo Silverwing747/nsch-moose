@@ -1,4 +1,4 @@
-nsch_moose
+Navier-Stokes Cahn Hilliard (NSCH) for MOOSE Framework
 =====
 
 # Theory and Equations for [Application Name]
