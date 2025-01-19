@@ -1,6 +1,5 @@
-Navier-Stokes Cahn-Hilliard (NSCH) for MOOSE
+nsch_moose
 =====
-The MOOSE Navier-Stokes
 
 # Theory and Equations for [Application Name]
 
