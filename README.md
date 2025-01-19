@@ -165,7 +165,7 @@ In this example, we simulate a scenario where a heavy fluid droplet is immersed 
 
 The input file for this test case is [examples/DroppingBubble/DroppingBubble.i](examples/DroppingBubble/DroppingBubble.i).
 
-The input file with adaptive mesh function anality is [examples/DroppingBubble/DroppingBubble_Adaptive.i](examples/DroppingBubble/DroppingBubble_Adaptive.i).
+The input file with adaptive mesh functionality is [examples/DroppingBubble/DroppingBubble_Adaptive.i](examples/DroppingBubble/DroppingBubble_Adaptive.i).
 
 The initial condition is shown below:
 ![Initial Condition](examples/DroppingBubble/DropletDrop_T0.png)
@@ -183,16 +183,20 @@ This example demonstrates the capability of the NSCH application to handle compl
 
 The Rayleigh-Taylor instability occurs when a denser fluid is placed above a lighter fluid in the presence of a gravitational field. This configuration is unstable, and any small perturbation at the interface will grow over time, leading to the formation of complex flow patterns. This phenomenon is commonly observed in various natural and industrial processes, such as in astrophysics, geophysics, and fluid mixing.
 
-The input file for this test case is [test/tests/numerical_examples/RayleighTaylorInstability.i](test/tests/numerical_examples/RayleighTaylorInstability.i).
+The input file for this test case is [examples/RayleighTaylor/RayleighTaylor.i](examples/RayleighTaylor/RayleighTaylor.i).
+
+The input file with adaptive mesh functionality is [examples/RayleighTaylor/RayleighTaylor_Adaptive.i](examples/RayleighTaylor/RayleighTaylor_Adaptive.i).
 
 The initial condition is shown below:
-![Initial Condition](test/tests/numerical_examples/RayleighTaylor_IC.png)
+![Initial Condition](examples/RayleighTaylor/RayleighTaylor_T0.png)
 
-As the simulation progresses, the interface between the two fluids becomes increasingly unstable, leading to the development of characteristic "fingers" of the denser fluid penetrating into the lighter fluid. The solution at an intermediate time step is shown below:
-![Intermediate Solution](test/tests/numerical_examples/RayleighTaylor_Mid.png)
+In the initial condition, the denser fluid is positioned above the lighter fluid, creating a gravitationally unstable configuration. The interface between the two fluids is initially flat, but small perturbations are present, which will grow over time due to the instability.
 
-At the final time step, the instability has fully developed, resulting in a complex interpenetrating pattern, as shown below:
-![Final Solution](test/tests/numerical_examples/RayleighTaylor_Final.png)
+As the simulation progresses, the perturbations at the interface grow, leading to the development of finger-like structures. These structures are characteristic of the Rayleigh-Taylor instability, where the denser fluid moves downward into the lighter fluid, and the lighter fluid rises into the denser fluid. The solution at an intermediate time step is shown below:
+![Intermediate Solution](examples/RayleighTaylor/RayleighTaylor_T1.png)
+
+At this intermediate stage, the finger-like structures have become more pronounced, and the interface between the two fluids has become highly irregular. The denser fluid continues to penetrate downward, while the lighter fluid rises, creating complex flow patterns and mixing between the two fluids shown below:
+![Final Solution](examples/RayleighTaylor/RayleighTaylor_T2.png)
 
 This example highlights the ability of the NSCH application to simulate instabilities and capture the intricate details of fluid interface dynamics.
 
