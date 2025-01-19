@@ -40,7 +40,7 @@ For more information, please see the official [MOOSE website](https://mooseframe
 
 2. Cloning MOOSE
 
-    MOOSE is hosted on GitHub and should be cloned directly from there using git. We recommend creating a projects directory to contain all of your MOOSE related work. To clone MOOSE, run the following commands in a terminal:
+    MOOSE is hosted on [GitHub](https://github.com/idaholab/moose) and should be cloned directly from there using [git](https://git-scm.com/). We recommend creating a projects directory to contain all of your MOOSE related work. To clone MOOSE, run the following commands in a terminal:
 
     ```bash
     mkdir -p ~/projects
@@ -50,7 +50,32 @@ For more information, please see the official [MOOSE website](https://mooseframe
     git checkout master
     ```
 
-3. 
+3. PETSc, libMesh, and WASP
 
+    MOOSE requires several support libraries in order to build or run properly. These libraries (PETSc, libMesh, and WASP) can be built using our supplied scripts:
+    cd ~/projects/moose/scripts
+    ```bash
+    export MOOSE_JOBS=6 METHODS=opt
+    ./update_and_rebuild_petsc.sh   || return
+    ./update_and_rebuild_libmesh.sh  || return
+    ./update_and_rebuild_wasp.sh  || return
+    ```
 
+4. Build and Test MOOSE
+
+    To build MOOSE, run the following commands:
+
+    ```bash
+    cd ~/projects/moose/test
+    make -j 6
+    ```
+
+    To test MOOSE, run the following commands:
+
+    ```bash
+    cd ~/projects/moose/test
+    ./run_tests -j 6
+    ```
+
+    Some tests are SKIPPED. This is normal as some tests are specific to available resources, or some other constraint your machine does not satisfy.
 
