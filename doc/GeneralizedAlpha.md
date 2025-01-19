@@ -73,3 +73,9 @@ To utilized the method, user can add an TimeIntegrator Section under the Executi
    rho_infty = 1.0
  [../]
 ```
+
+More details can be find in the [implicit_convergence.i](test/tests/time_integrator/implicit_convergence.i)
+
+To validate the implementation, we adopted the method of manufactured solution (MMS), and performed refinement study using different value of $\rho_\infty$ by running [implicit_convergece.py](test/tests/time_integrator/implicit_convergence.py). The convergence results confirms a second-order accuracy using different values of $\rho_\infty$:
+
+![Results ](test/tests/time_integrator/implicit_convergence.png)
