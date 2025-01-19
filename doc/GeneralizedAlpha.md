@@ -56,3 +56,10 @@ Taking $\rho_\infty \in [0,1]$ and using the above equations to determine $\alph
 $$
 \rho_\infty = \frac{1}{2}.
 $$
+
+## Implementation and convergence test
+
+The time integration scheme is implemented under:
+```cpp
+#include "generalizedalpha.h"
+```
