@@ -116,14 +116,13 @@ The NSCH application is designed to allow users to easily couple and decouple th
 
 To verify the implementation of the Navier-Stokes equations, two benchmark problems are provided:
 
-1. **Taylor-Green Vortex**: This problem is a well-known analytical solution for the Navier-Stokes equations. It involves a decaying vortex and is used to test the accuracy and stability of the numerical methods used in the NSCH application. The `InputFileName` corresponds to this test case is [test/tests/navier_stokes/TaylorGreenVortex.i](test/tests/navier_stokes/TaylorGreenVortex.i)
-
-2. **Lid-Driven Cavity**: This problem involves a square cavity with a moving lid, which generates a recirculating flow inside the cavity. It is commonly used to test the performance of numerical solvers for incompressible flows and to validate the implementation of boundary conditions. The `InputFileName` corresponds to this test case is [test/tests/navier_stokes/LidDrivenCavity.i](test/tests/navier_stokes/LidDrivenCavity.i). The initial condition looks as follow: 
-![Results ](test/tests/navier_stokes/TaylorGreen_IC.png).
-
+1. **Taylor-Green Vortex**: This problem is a well-known analytical solution for the Navier-Stokes equations. It involves a decaying vortex and is used to test the accuracy and stability of the numerical methods used in the NSCH application. The `InputFileName` corresponds to this test case is [test/tests/navier_stokes/TaylorGreenVortex.i](test/tests/navier_stokes/TaylorGreenVortex.i). The initial condition looks as follow: 
+    ![Results ](test/tests/navier_stokes/TaylorGreen_IC.png).
 The solution at final time step ($t = 1.0$) looks as follow:
-![Results ](test/tests/navier_stokes/TaylorGreen_Final.png).
+    ![Results ](test/tests/navier_stokes/TaylorGreen_Final.png).
 
+
+2. **Lid-Driven Cavity**: This problem involves a square cavity with a moving lid, which generates a recirculating flow inside the cavity. It is commonly used to test the performance of numerical solvers for incompressible flows and to validate the implementation of boundary conditions. The `InputFileName` corresponds to this test case is [test/tests/navier_stokes/LidDrivenCavity.i](test/tests/navier_stokes/LidDrivenCavity.i). 
 
 
 
