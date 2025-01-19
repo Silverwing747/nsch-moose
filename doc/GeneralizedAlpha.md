@@ -57,9 +57,19 @@ $$
 \rho_\infty = \frac{1}{2}.
 $$
 
-## Implementation and convergence test
+For more detail, we refer readers to [Jansen, 2000](https://doi.org/10.1016/S0045-7825(00)00203-6).
+
+## Implementation, tutorial and convergence test
 
 The time integration scheme is implemented under:
-```cpp
-#include "generalizedalpha.h"
+- [GeneralizedAlpha.h](include/timeintegrators/GeneralizedAlpha.h)
+- [GeneralizedAlpha.C](src/timeintegrators/GeneralizedAlpha.C)
+
+To utilized the method, user can add an TimeIntegrator Section under the Executioner Block in the input file, e.g.
+
+```markdown
+ [./TimeIntegrator]
+   type = GeneralizedAlpha
+   rho_infty = 1.0
+ [../]
 ```
