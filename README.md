@@ -154,3 +154,46 @@ The solution at a later time step, showing the phase separation nearing equilibr
 These images illustrate the progression of the spinodal decomposition process, from the initial homogeneous state, through the early stages of phase separation, to the final equilibrium state where distinct phases are fully developed.
 
 This test case helps ensure that the Cahn-Hilliard solver in the NSCH application is correctly implemented and capable of simulating phase separation processes.
+
+## Numerical Example of NSCH Application
+
+Once each subcomponent is verified, we can use NSCH to solve problems of interest. Here we present two cases: (1) a heavy fluid immersed in light fluid and dropping due to gravity, and (2) Rayleigh-Taylor instability.
+
+### Case 1: Heavy Fluid Dropping Due to Gravity
+
+In this example, we simulate a scenario where a heavy fluid droplet is immersed in a lighter fluid and allowed to fall under the influence of gravity. This setup is useful for studying the dynamics of fluid interfaces and the effects of density differences on fluid motion.
+
+The input file for this test case is [examples/DroppingBubble/DroppingBubble.i](examples/DroppingBubble/DroppingBubble.i).
+
+The input file with adaptive mesh function anality is [examples/DroppingBubble/DroppingBubble_Adaptive.i](examples/DroppingBubble/DroppingBubble_Adaptive.i).
+
+The initial condition is shown below:
+![Initial Condition](examples/DroppingBubble/DropletDrop_T0.png)
+
+As the simulation progresses, the heavy fluid droplet accelerates downward due to gravity, deforming the interface between the two fluids. The solution at an intermediate time step is shown below:
+![Intermediate Solution](examples/DroppingBubble/DropletDrop_T0.3.png)
+
+As the heavy fluid droplet reaches the bottom wall, it experiences a series of oscillations due to the interplay between gravitational forces and surface tension. These oscillations gradually diminish as the system approaches an equilibrium state. The final configuration demonstrates the droplet's attachment to the bottom wall, where it stabilizes after the oscillatory motion ceases. This behavior is indicative of the complex fluid dynamics captured by the NSCH application, showcasing its ability to simulate the interactions and stabilization processes of immiscible fluids with different densities.
+
+![Final Solution](examples/DroppingBubble/DropletDrop_T1.png)
+
+This example demonstrates the capability of the NSCH application to handle complex fluid interactions and accurately capture the dynamics of immiscible fluids with different densities.
+
+### Case 2: Rayleigh-Taylor Instability
+
+The Rayleigh-Taylor instability occurs when a denser fluid is placed above a lighter fluid in the presence of a gravitational field. This configuration is unstable, and any small perturbation at the interface will grow over time, leading to the formation of complex flow patterns. This phenomenon is commonly observed in various natural and industrial processes, such as in astrophysics, geophysics, and fluid mixing.
+
+The input file for this test case is [test/tests/numerical_examples/RayleighTaylorInstability.i](test/tests/numerical_examples/RayleighTaylorInstability.i).
+
+The initial condition is shown below:
+![Initial Condition](test/tests/numerical_examples/RayleighTaylor_IC.png)
+
+As the simulation progresses, the interface between the two fluids becomes increasingly unstable, leading to the development of characteristic "fingers" of the denser fluid penetrating into the lighter fluid. The solution at an intermediate time step is shown below:
+![Intermediate Solution](test/tests/numerical_examples/RayleighTaylor_Mid.png)
+
+At the final time step, the instability has fully developed, resulting in a complex interpenetrating pattern, as shown below:
+![Final Solution](test/tests/numerical_examples/RayleighTaylor_Final.png)
+
+This example highlights the ability of the NSCH application to simulate instabilities and capture the intricate details of fluid interface dynamics.
+
+These numerical examples illustrate the versatility and robustness of the NSCH application in handling a wide range of fluid flow problems involving complex interactions between immiscible fluids with different densities.
