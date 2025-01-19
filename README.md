@@ -20,7 +20,7 @@ Some of the capabilities enabled by MOOSE:
 - Flexible, pluggable graphical user interface
 - Approximately 30 pluggable interfaces allow specialization of every part of the solve
 
-For more information, including installation instructions, please see the official [MOOSE website](https://mooseframework.inl.gov).
+For more information, please see the official [MOOSE website](https://mooseframework.inl.gov).
 
 # Model Description
 
@@ -55,10 +55,31 @@ In the equations above, the first equation is the Navier-Stokes equation, in whi
 
 We adopt the variational multiscale (VMS) method for the numerical implementation. The VMS method is a numerical technique used to solve partial differential equations, particularly in fluid dynamics. It involves decomposing the solution into coarse and fine scales, allowing for more accurate and efficient simulations of complex systems. By capturing the effects of smaller scales on the larger scales, VMS improves the stability and accuracy of the numerical solution, making it particularly useful for simulating turbulent flows and multiphase interactions. For the exact formulation, we refer readers to the book chapter ["Phase-Field Modeling for Flow Simulation"](https://doi.org/10.1007/978-3-031-36942-1_4) in *Frontiers in Computational Fluid-Structure Interaction and Flow Simulation*, T. E. Tezduyar, Ed. (Springer International Publishing, Cham, 2023).
 
-We use the generalized - $\alpha$ method for time integration; see [GeneralizedAlpha.md](doc/GeneralizedAlpha.md) for implementation details. 
+We implemented the generalized - $\alpha$ method for time integration; see [GeneralizedAlpha.md](doc/GeneralizedAlpha.md) for implementation details. 
 
+# Tutorial
 
+## Install MOOSE on HPC Cluster
+1. Load required modules on the cluster:
 
+    ```bash
+    module load gcc/10.2.0 openmpi/4.0.5-gcc10.2.0
+    module load anaconda3/2020.11
+    ```
+
+2. Cloning MOOSE
+
+    MOOSE is hosted on GitHub and should be cloned directly from there using git. We recommend creating a projects directory to contain all of your MOOSE related work. To clone MOOSE, run the following commands in a terminal:
+
+    ```bash
+    mkdir -p ~/projects
+    cd ~/projects
+    git clone https://github.com/idaholab/moose.git
+    cd moose
+    git checkout master
+    ```
+
+3. 
 
 
 
