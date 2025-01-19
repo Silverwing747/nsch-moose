@@ -1,6 +1,6 @@
-# Generalized $\alpha$ Method
+# Generalized - $\alpha$ Method
 
-The Generalized Alpha Method is a numerical integration technique used for solving differential equations, particularly in the context of structural dynamics and transient analysis. It is designed to provide a balance between accuracy and numerical dissipation, allowing for the control of high-frequency response damping while maintaining second-order accuracy for low-frequency response.
+The Generalized - $\alpha$ Method is a numerical integration technique used for solving differential equations, particularly in the context of structural dynamics and transient analysis. It is designed to provide a balance between accuracy and numerical dissipation, allowing for the control of high-frequency response damping while maintaining second-order accuracy for low-frequency response.
 
 Key features of the Generalized Alpha Method include:
 - Control over numerical dissipation through parameters that can be adjusted to achieve desired damping characteristics.
@@ -11,7 +11,7 @@ This method is particularly useful in simulations where controlling the high-fre
 
 ## Theory
 
-The algorithm can be formulated as follows: Given $\dot{V}_n$, $V_n$, and $\Delta t_n = t_{n+1} - t_n$, find $\dot{V}_{n+1}$, $V_{n+1}$, $\dot{V}_{n+\alpha_m}$, $V_{n+\alpha_f}$ such that the residual vector:
+The algorithm can be formulated as follows: Given $\dot{V}$, $V_n$, and $\Delta t_n = t_{n+1} - t_n$, find $\dot{V}_{n+1}$, $V_{n+1}$, $\dot{V}_{n+\alpha_m}$, $V_{n+\alpha_f}$ such that the residual vector:
 
 $$
 R(\dot{V}_{n+\alpha_m}, V_{n+\alpha_f}) = 0,
