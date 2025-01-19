@@ -126,8 +126,27 @@ To verify the implementation of the Navier-Stokes equations, two benchmark probl
 
 2. **Lid-Driven Cavity**: This benchmark problem involves a square cavity with a moving lid, generating a recirculating flow inside the cavity. It is commonly used to test the performance of numerical solvers for incompressible flows and to validate the implementation of boundary conditions. The input file for this test case is [test/tests/navier_stokes/LidDrivenCavity.i](test/tests/navier_stokes/LidDrivenCavity.i). 
 
-    Once the vortex is developed, the solution should look like this:
+    Once the vortex is developed, the velocity megnitude field should look like this:
     ![Developed Vortex](test/tests/navier_stokes/LidDrivenCavity_Velocity.png)
 
 
 These test cases help ensure that the Navier-Stokes solver in the NSCH application is correctly implemented and capable of handling different types of fluid flow problems. 
+
+### Test Cahn-Hilliard Subsection
+
+To verify the implementation of the Cahn-Hilliard equation, we use the **Spinodal Decomposition** problem. Spinodal decomposition is a process where a homogeneous mixture of two components separates into distinct regions with different compositions. This phenomenon occurs when the mixture is quenched into an unstable region of its phase diagram, leading to spontaneous phase separation. The spinodal decomposition test involves initializing the system with a small random perturbation around a homogeneous state. Over time, the system evolves, and distinct phases form, characterized by regions rich in one component and regions rich in the other. This test is useful for validating the accuracy and stability of the Cahn-Hilliard solver, as well as its ability to capture the dynamics of phase separation.
+
+The input file for this test case is [test/tests/cahn_hilliard/SpinodalDecomposition.i](test/tests/cahn_hilliard/SpinodalDecomposition.i).
+
+The initial condition is shown below:
+![Initial Condition](test/tests/cahn_hilliard/Spinodal_IC.png)
+
+The solution at an intermediate time step, showing the beginning of phase separation, is shown below:
+![Phase Separation Start](test/tests/cahn_hilliard/Spinodal_Mid.png)
+
+The solution at a later time step, showing the phase separation nearing equilibrium, is shown below:
+![Phase Separation Final](test/tests/cahn_hilliard/Spinodal_Final.png)
+
+These images illustrate the progression of the spinodal decomposition process, from the initial homogeneous state, through the early stages of phase separation, to the final equilibrium state where distinct phases are fully developed.
+
+This test case helps ensure that the Cahn-Hilliard solver in the NSCH application is correctly implemented and capable of simulating phase separation processes.
