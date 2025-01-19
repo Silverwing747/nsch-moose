@@ -89,29 +89,35 @@ For more information, please see the official [MOOSE website](https://mooseframe
     cd nsch-moose
     ```
 
-2. Build the NSCH Application:
+2. Build and Execute the NSCH Application:
 
     To build the NSCH Application, run the following commands:
 
-        ```bash
-        cd ~/projects/nsch-moose
-        make -j 6
-        ```
+    ```bash
+    cd ~/projects/nsch-moose
+    make -j 6
+    ```
 
     This will generate an executable file `nsch-moose-opt` under the directory `~/projects/nsch-moose`.
 
     You can now execute the program using:
 
-        ```bash
-        mpiexec -n N ./nsch-moose-opt -i InputFileName
-        ```
+    ```bash
+    mpiexec -n N ./nsch-moose-opt -i InputFileName
+    ```
 
     where `N` is the number of cores, and `InputFileName` is the path to the input file specified by the user. For more details about the input file, refer to the [MOOSE Input File Document](https://mooseframework.inl.gov/modules/thermal_hydraulics/tutorials/basics/input_file.html).
 
-3. Test NSCH Application
+## Test NSCH Application
 
-    The general implementation of NSCH allows the simply coupling and decoupling of the Naver-Stokes functional and Cahn-Hilliard functional, which allows user to test each subsystems one by one.
+The NSCH application is designed to allow users to easily couple and decouple the Navier-Stokes and Cahn-Hilliard functionalities. This modular approach enables users to test each subsystem independently, ensuring that each part of the implementation is functioning correctly before combining them for more complex simulations.
 
-    3.1 Test Navier-Stokes Subsection
+### Test Navier-Stokes Subsection
 
-    To verify the implementation of Navier-Stokes equation, 
+To verify the implementation of the Navier-Stokes equations, two benchmark problems are provided:
+
+1. **Taylor-Green Vortex**: This problem is a well-known analytical solution for the Navier-Stokes equations. It involves a decaying vortex and is used to test the accuracy and stability of the numerical methods used in the NSCH application. The `InputFileName` corresponds to this test case is [TaylorGreenVortex.i](test/tests/navier_stokes/TaylorGreenVortex.i)
+
+2. **Lid-Driven Cavity**: This problem involves a square cavity with a moving lid, which generates a recirculating flow inside the cavity. It is commonly used to test the performance of numerical solvers for incompressible flows and to validate the implementation of boundary conditions.
+
+These test cases help ensure that the Navier-Stokes solver in the NSCH application is correctly implemented and capable of handling different types of fluid flow problems.
