@@ -192,10 +192,9 @@ The initial condition is shown below:
 
 In the initial condition, the denser fluid is positioned above the lighter fluid, creating a gravitationally unstable configuration. The interface between the two fluids is initially flat, but small perturbations are present, which will grow over time due to the instability.
 
-As the simulation progresses, the perturbations at the interface grow, leading to the development of finger-like structures. These structures are characteristic of the Rayleigh-Taylor instability, where the denser fluid moves downward into the lighter fluid, and the lighter fluid rises into the denser fluid. The solution at an intermediate time step is shown below:
+As the simulation progresses, the perturbations at the interface grow, leading to the development of finger-like structures. These structures are characteristic of the Rayleigh-Taylor instability, where the denser fluid moves downward into the lighter fluid, and the lighter fluid rises into the denser fluid. At this intermediate stage, the finger-like structures have become more pronounced, and the interface between the two fluids has become highly irregular. The denser fluid continues to penetrate downward, while the lighter fluid rises, creating complex flow patterns and mixing between the two fluids. The solutions at an intermediate time step are shown below:
 ![Intermediate Solution](examples/RayleighTaylor/RayleighTaylor_T1.png)
 
-At this intermediate stage, the finger-like structures have become more pronounced, and the interface between the two fluids has become highly irregular. The denser fluid continues to penetrate downward, while the lighter fluid rises, creating complex flow patterns and mixing between the two fluids shown below:
 ![Final Solution](examples/RayleighTaylor/RayleighTaylor_T2.png)
 
 This example highlights the ability of the NSCH application to simulate instabilities and capture the intricate details of fluid interface dynamics.
